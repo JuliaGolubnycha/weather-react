@@ -1,17 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from "react";
+import "./styles.css";
+import Header from "./Header";
+import Form from "./Form";
+import BasicText from "./Basic_text";
+import MainWeather from "./Main_weather";
+import Days from "./Days";
+import Footer from "./Footer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
-  </React.StrictMode>
+  </StrictMode>
 );
+export default function App() {
+  const [city, setCity] = useState(""); 
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  return (
+    <div className="App body">
+      <Form onCityChange={setCity} />
+      <BasicText city={city} />
+      <Header />
+      <MainWeather />
+      <Days />
+      <Footer />
+    </div>
+  );
+}
