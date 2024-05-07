@@ -24,7 +24,7 @@ export default function Weather(props) {
 
   return (
     <h1>
-      {temperature}°C
+      {Math.round(temperature)}°C
     </h1>
   );
 }
