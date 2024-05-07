@@ -3,28 +3,30 @@ import axios from "axios";
 
 export default function Weather(props) {
   const [temperature, setTemperature] = useState(null);
-  const city_name = props.city;
+  const { city } = props;
   const apiKey = "ed238469f9b5e9d801834270e65449bc";
-  const url =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-    city_name +
-    "&appid=" +
-    apiKey +
-    "&units=metric";
 
   useEffect(() => {
-    axios.get(url)
-      .then(response => {
+    const fetchWeather = async () => {
+      try {
+        const response = await axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+        );
+        console.log("Response data:", response.data); // Вивести дані в консоль
         setTemperature(response.data.main.temp);
-      })
-      .catch(error => {
+      } catch (error) {
         console.error("Error fetching weather data:", error);
-      });
-  }, [url]);
+      }
+    };
+  
+    fetchWeather();
+  }, [city, apiKey]);
+  
+  
 
   return (
     <h1>
-      {temperature}°C
+      {temperature !== null ? `${Math.round(parseFloat(temperature))}°C` : ''}
     </h1>
   );
 }
