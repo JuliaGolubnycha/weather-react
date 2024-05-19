@@ -1,18 +1,18 @@
 import React from "react";
 
-export default function MainWeather(prompt) {
+export default function MainWeather({mood, humidity, wind}) {
   return (
     <div className="container">
       <div className="row">
         <div className="col">
           <p className="charsss" id="clouds">
-            It's sunny today
+            Main mood of the day: {mood}
           </p>
           <p className="charsss">
-            Humidity: <span id="humid">75%</span>
+            Humidity: {humidity}%
           </p>
           <p className="charsss">
-            Wind: <span id="wind">19 km/h</span>
+            Wind: {wind} km/h
           </p>
         </div>
       </div>

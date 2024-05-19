@@ -1,12 +1,14 @@
 import React from "react";
 
-export default function Days(prompt) {
+export default function Days(props) {
+  let now = new Date();
+  let day_of_the_week = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   return (
     <div className="container">
       <div className="row" id="forecast-row">
         <div className="col">
           <p className="dotw">
-            <span id="dotwsun">Sun</span>
+            <span id="dotwsun">{day_of_the_week[(now.getDay()+1) % 7]}</span>
             <br />
             <span className="fortemp" id="temp_first">
               27{" "}
@@ -23,7 +25,7 @@ export default function Days(prompt) {
         </div>
         <div className="col">
           <p className="dotw">
-            <span id="dotwmon">Mon</span>
+            <span id="dotwmon">{day_of_the_week[(now.getDay()+2) % 7]}</span>
             <br />
             <span className="fortemp" id="temp_second">
               21{" "}
@@ -40,7 +42,7 @@ export default function Days(prompt) {
         </div>
         <div className="col">
           <p className="dotw">
-            <span id="dotwtue">Tue</span>
+            <span id="dotwtue">{day_of_the_week[(now.getDay()+3) % 7]}</span>
             <br />
             <span className="fortemp" id="temp_third">
               26{" "}
@@ -57,7 +59,7 @@ export default function Days(prompt) {
         </div>
         <div className="col">
           <p className="dotw">
-            <span id="dotwwed">Wed</span>
+            <span id="dotwwed">{day_of_the_week[(now.getDay()+4) % 7]}</span>
             <br />
             <span className="fortemp" id="temp_forth">
               17{" "}
@@ -74,7 +76,7 @@ export default function Days(prompt) {
         </div>
         <div className="col">
           <p className="dotw">
-            <span id="dotwthur">Thur</span>
+            <span id="dotwthur">{day_of_the_week[(now.getDay()+5) % 7]}</span>
             <br />
             <span className="fortemp" id="temp_fifth">
               28{" "}
@@ -88,12 +90,6 @@ export default function Days(prompt) {
               id="icon25"
             />
           </p>
-        </div>
-
-        <div className="locate">
-          <button type="button" className="btn btn-info" id="locate">
-            Find me
-          </button>
         </div>
       </div>
     </div>

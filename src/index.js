@@ -1,14 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState } from "react";
+import React, { useState, useEffect }  from "react";
 import "./styles.css";
 import Header from "./Header";
 import Form from "./Form";
 import BasicText from "./Basic_text";
-import MainWeather from "./Main_weather";
-import Days from "./Days";
 import Footer from "./Footer";
+import Locating from "./locating";
+import LoadingPage from "./loading";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -19,16 +19,24 @@ root.render(
   </StrictMode>
 );
 export default function App() {
+  let [loaded, setLoaded] = useState(false);
   const [city, setCity] = useState(""); 
+
+  function handleSearch() {
+    setLoaded(true);
+  }
 
   return (
     <div className="App body">
-      <Form onCityChange={setCity} />
-      <BasicText city={city} />
       <Header />
-      <MainWeather />
-      <Days />
+      <Form onCityChange={setCity} onSearch={handleSearch} />
+      {loaded ? (
+        <BasicText city={city} />
+      ) : (
+        <LoadingPage />
+      )}
       <Footer />
+      <Locating />
     </div>
   );
 }

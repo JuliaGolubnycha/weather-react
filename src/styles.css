@@ -114,3 +114,14 @@ h2 {
   margin: 0 auto;
   display: block;
 }
+
+.temp {
+  color: white;
+}
+
+.anime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}

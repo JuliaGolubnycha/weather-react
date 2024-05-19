@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-export default function Form({ onCityChange }) {
+export default function Form({ onCityChange, onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
-    onCityChange(searchTerm.trim()); // Pass the searchTerm to the onCityChange function after trimming whitespace
+    onCityChange(searchTerm.trim()); 
+    onSearch();
   }
 
   function handleChange(event) {
@@ -19,7 +20,6 @@ export default function Form({ onCityChange }) {
           type="text"
           placeholder="Enter your city's name"
           className="form-control"
-          id="search-input"
           value={searchTerm}
           onChange={handleChange}
         />

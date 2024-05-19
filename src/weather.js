@@ -12,7 +12,7 @@ export default function Weather(props) {
         const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
         );
-        console.log("Response data:", response.data); // Вивести дані в консоль
+        console.log("Response data:", response.data); 
         setTemperature(response.data.main.temp);
       } catch (error) {
         console.error("Error fetching weather data:", error);
