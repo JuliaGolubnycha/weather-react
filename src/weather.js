@@ -26,7 +26,7 @@ export default function Weather(props) {
 
   return (
     <h1>
-      {temperature !== null ? `${Math.round(parseFloat(temperature))}°C` : ''}
+      {Math.round(temperature)}°C
     </h1>
   );
 }
