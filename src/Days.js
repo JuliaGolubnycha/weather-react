@@ -1,4 +1,5 @@
 import React from "react";
+import App from "./another_animated_weather";
 
 
 export default function Days(props) {
@@ -20,12 +21,7 @@ export default function Days(props) {
               {temp0}{" "}
             </span>
             <br />
-            <img
-              src="https://openweathermap.org/img/wn/01d@2x.png"
-              alt="weather"
-              className="icon2"
-              id="icon21"
-            />
+            <App icon={props.icon0} size="60" />
           </p>
         </div>
         <div className="col">
@@ -36,12 +32,7 @@ export default function Days(props) {
               {temp1}{" "}
             </span>
             <br />
-            <img
-              src="https://openweathermap.org/img/wn/10n@2x.png"
-              alt="weather"
-              className="icon2"
-              id="icon22"
-            />
+            <App icon={props.icon1} size="60" />
           </p>
         </div>
         <div className="col">
@@ -52,12 +43,7 @@ export default function Days(props) {
               {temp2}{" "}
             </span>
             <br />
-            <img
-              src="https://openweathermap.org/img/wn/03d@2x.png"
-              alt="weather"
-              className="icon2"
-              id="icon23"
-            />
+            <App icon={props.icon2} size="60" />
           </p>
         </div>
         <div className="col">
@@ -68,12 +54,7 @@ export default function Days(props) {
               {temp3}{" "}
             </span>
             <br />
-            <img
-              src="https://openweathermap.org/img/wn/01n@2x.png"
-              alt="weather"
-              className="icon2"
-              id="icon24"
-            />
+            <App icon={props.icon3} size="60" />
           </p>
         </div>
         <div className="col">
@@ -84,12 +65,7 @@ export default function Days(props) {
               {temp4}{" "}
             </span>
             <br />
-            <img
-              src="https://openweathermap.org/img/wn/10d@2x.png"
-              alt="weather"
-              className="icon2"
-              id="icon25"
-            />
+            <App icon={props.icon4} size="60" />
           </p>
         </div>
       </div>
