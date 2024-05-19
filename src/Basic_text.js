@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import App from "./animated_weather";
+import AnimatedWeather from "./animated_weather";
 import WeatherTemperature from "./temp_conv";
+import "./styles.css";
 
 export default function BasicText({ city }) {
   const [temperature, setTemperature] = useState(null);
@@ -39,7 +40,7 @@ export default function BasicText({ city }) {
         <h2>
           The weather in <span className="city">{city}</span>
           <br />
-          <App icon={icon} size="84" />
+          <AnimatedWeather icon={icon} size="84" />
         </h2>
         <WeatherTemperature celsius={temperature} mood={mood} humidity={humidity} wind={wind} lat={latitude} long={longitude}/>
       </div>

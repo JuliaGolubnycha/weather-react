@@ -1,5 +1,6 @@
 import React from "react";
-import App from "./another_animated_weather";
+import AnotherAnimatedWeather from "./another_animated_weather";
+import "./styles.css";
 
 
 export default function Days(props) {
@@ -21,7 +22,7 @@ export default function Days(props) {
               {temp0}{" "}
             </span>
             <br />
-            <App icon={props.icon0} size="60" />
+            <AnotherAnimatedWeather icon={props.icon0} size="60" />
           </p>
         </div>
         <div className="col">
@@ -32,7 +33,7 @@ export default function Days(props) {
               {temp1}{" "}
             </span>
             <br />
-            <App icon={props.icon1} size="60" />
+            <AnotherAnimatedWeather icon={props.icon1} size="60" />
           </p>
         </div>
         <div className="col">
@@ -43,7 +44,7 @@ export default function Days(props) {
               {temp2}{" "}
             </span>
             <br />
-            <App icon={props.icon2} size="60" />
+            <AnotherAnimatedWeather icon={props.icon2} size="60" />
           </p>
         </div>
         <div className="col">
@@ -54,7 +55,7 @@ export default function Days(props) {
               {temp3}{" "}
             </span>
             <br />
-            <App icon={props.icon3} size="60" />
+            <AnotherAnimatedWeather icon={props.icon3} size="60" />
           </p>
         </div>
         <div className="col">
@@ -65,7 +66,7 @@ export default function Days(props) {
               {temp4}{" "}
             </span>
             <br />
-            <App icon={props.icon4} size="60" />
+            <AnotherAnimatedWeather icon={props.icon4} size="60" />
           </p>
         </div>
       </div>

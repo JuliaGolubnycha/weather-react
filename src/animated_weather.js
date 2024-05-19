@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactAnimatedWeather from 'react-animated-weather';
+import "./styles.css";
 
 const defaults = {
   color: 'whitesmoke',
@@ -27,7 +28,7 @@ const codeMapping = {
   "50n": "FOG"
 };
 
-const App = (props) => (
+const AnimatedWeather = (props) => (
   <ReactAnimatedWeather
     icon={codeMapping[props.icon]}
     color={defaults.color}
@@ -36,4 +37,4 @@ const App = (props) => (
   />
 );
 
-export default App;
+export default AnimatedWeather;

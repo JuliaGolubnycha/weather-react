@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactAnimatedWeather from 'react-animated-weather';
+import "./styles.css";
 
 const codeMapping={
     "clear-sky-day": "CLEAR_DAY",
@@ -27,7 +28,7 @@ const defaults = {
   animate: true
 };
 
-const App = (props) => (
+const AnotherAnimatedWeather = (props) => (
   <ReactAnimatedWeather
     icon={codeMapping[props.icon]}
     color={defaults.color}
@@ -36,4 +37,4 @@ const App = (props) => (
   />
 );
 
-export default App;
+export default AnotherAnimatedWeather;
