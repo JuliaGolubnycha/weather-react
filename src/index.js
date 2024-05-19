@@ -7,7 +7,6 @@ import Header from "./Header";
 import Form from "./Form";
 import BasicText from "./Basic_text";
 import Footer from "./Footer";
-import Locating from "./locating";
 import LoadingPage from "./loading";
 
 const rootElement = document.getElementById("root");
@@ -36,7 +35,6 @@ export default function App() {
         <LoadingPage />
       )}
       <Footer />
-      <Locating />
     </div>
   );
 }

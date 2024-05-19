@@ -36,10 +36,17 @@ h2 {
   color: whitesmoke;
 }
 
-.gradus {
+.gradus  {
   font-size: 16px;
   position: relative;
   top: -11px;
+  color: whitesmoke;
+}
+
+.metrics {
+  font-size: 16px;
+  position: relative;
+  top: -15px;
   color: whitesmoke;
 }
 

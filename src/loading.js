@@ -1,13 +1,13 @@
 import React from "react";
-import { Audio } from 'react-loader-spinner';
+import { Grid } from 'react-loader-spinner';
 
 export default function LoadingPage() {
     return (
         <div className="anime">
-            <Audio
+            <Grid
                 height="140"
                 width="280"
-                radius="90"
+                radius="13"
                 color="aquamarine"
                 ariaLabel="loading"
                 wrapperStyle={{}}

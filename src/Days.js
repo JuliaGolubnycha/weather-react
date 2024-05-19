@@ -1,7 +1,13 @@
 import React from "react";
 
+
 export default function Days(props) {
   let now = new Date();
+  let temp0=props.temp0;
+  let temp1=props.temp1;
+  let temp2=props.temp2;
+  let temp3=props.temp3;
+  let temp4=props.temp4;
   let day_of_the_week = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   return (
     <div className="container">
@@ -11,9 +17,8 @@ export default function Days(props) {
             <span id="dotwsun">{day_of_the_week[(now.getDay()+1) % 7]}</span>
             <br />
             <span className="fortemp" id="temp_first">
-              27{" "}
+              {temp0}{" "}
             </span>
-            <span className="colgradus">°C</span>
             <br />
             <img
               src="https://openweathermap.org/img/wn/01d@2x.png"
@@ -28,9 +33,8 @@ export default function Days(props) {
             <span id="dotwmon">{day_of_the_week[(now.getDay()+2) % 7]}</span>
             <br />
             <span className="fortemp" id="temp_second">
-              21{" "}
+              {temp1}{" "}
             </span>
-            <span className="colgradus">°C</span>
             <br />
             <img
               src="https://openweathermap.org/img/wn/10n@2x.png"
@@ -45,9 +49,8 @@ export default function Days(props) {
             <span id="dotwtue">{day_of_the_week[(now.getDay()+3) % 7]}</span>
             <br />
             <span className="fortemp" id="temp_third">
-              26{" "}
+              {temp2}{" "}
             </span>
-            <span className="colgradus">°C</span>
             <br />
             <img
               src="https://openweathermap.org/img/wn/03d@2x.png"
@@ -62,9 +65,8 @@ export default function Days(props) {
             <span id="dotwwed">{day_of_the_week[(now.getDay()+4) % 7]}</span>
             <br />
             <span className="fortemp" id="temp_forth">
-              17{" "}
+              {temp3}{" "}
             </span>
-            <span className="colgradus">°C</span>
             <br />
             <img
               src="https://openweathermap.org/img/wn/01n@2x.png"
@@ -79,9 +81,8 @@ export default function Days(props) {
             <span id="dotwthur">{day_of_the_week[(now.getDay()+5) % 7]}</span>
             <br />
             <span className="fortemp" id="temp_fifth">
-              28{" "}
+              {temp4}{" "}
             </span>
-            <span className="colgradus">°C</span>
             <br />
             <img
               src="https://openweathermap.org/img/wn/10d@2x.png"

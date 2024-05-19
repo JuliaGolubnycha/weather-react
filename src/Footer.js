@@ -5,7 +5,7 @@ export default function Footer() {
     <p className="position-relative top-100 start-50 translate-middle inform">
       Coded by{" "}
       <a
-        href="https://github.com/JuliaGolubnycha/vanilla-weather-app"
+        href="https://github.com/JuliaGolubnycha/weather-react"
         className="bottom"
       >
         Yuliia Holubnycha

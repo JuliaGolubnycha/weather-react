@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import MainWeather from "./Main_weather";
 import App from "./animated_weather";
-import Days from "./Days";
+import WeatherTemperature from "./temp_conv";
 
 export default function BasicText({ city }) {
   const [temperature, setTemperature] = useState(null);
@@ -27,7 +26,6 @@ export default function BasicText({ city }) {
           setIcon(response.data.weather[0].icon);
           setLatitude(response.data.coord.lat);
           setLongitude(response.data.coord.lon);
-          console.log(response.data);
         })
         .catch(error => {
           console.error("Error fetching weather data:", error);
@@ -41,12 +39,10 @@ export default function BasicText({ city }) {
         <h2>
           The weather in <span className="city">{city}</span>
           <br />
-          <App icon={icon}/>
+          <App icon={icon} size="84" />
         </h2>
-        <h1 className="temp">{Math.round(temperature)}°C</h1>
+        <WeatherTemperature celsius={temperature} mood={mood} humidity={humidity} wind={wind} lat={latitude} long={longitude}/>
       </div>
-      <MainWeather mood={mood} humidity={humidity} wind={wind}/>
-      <Days lat={latitude} long={longitude}/>
     </div>
   );
 }

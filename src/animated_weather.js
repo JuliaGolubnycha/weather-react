@@ -3,7 +3,6 @@ import ReactAnimatedWeather from 'react-animated-weather';
 
 const defaults = {
   color: 'whitesmoke',
-  size: 84,
   animate: true
 };
 
@@ -32,7 +31,7 @@ const App = (props) => (
   <ReactAnimatedWeather
     icon={codeMapping[props.icon]}
     color={defaults.color}
-    size={defaults.size}
+    size={props.size}
     animate={defaults.animate}
   />
 );
